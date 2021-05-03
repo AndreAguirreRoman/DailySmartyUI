@@ -8,7 +8,10 @@ import axios from 'axios'
 export function fetchRecentPosts() {
     return function (dispatch) {
 
-        axios.get('https://api.dailysmarty.com/posts')
+        axios.get('https://api.dailysmarty.com/posts', {
+            mode: "no-cors"
+        })
+
             .then(response => {
                 console.log('fetch recent posts', response.data.posts);
                 dispatch({
