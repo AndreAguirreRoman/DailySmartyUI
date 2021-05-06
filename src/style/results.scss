@@ -1,0 +1,8 @@
+.results {
+  @include default-page-layout();
+
+  .post-topic {
+    color: $color-gray-one;
+    margin: 0px;
+  }
+}
